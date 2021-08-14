@@ -1,0 +1,40 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  max-width: 100vw;
+  max-height: 100vh;
+  overflow: hidden;
+}
+video {
+  width: 100%;
+  height: 50vh;
+  background: #000;
+  position: absolute;
+}
+#friendsvideo {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: #000;
+}
+#yourvideo {
+  width: 20vh;
+  height: 20vh;
+  position: absolute;
+  bottom: 0;
+  right: 0; z-index:5;
+  background: #000;
+}
+button {
+  position: absolute;
+  left: 0;
+  bottom: 5px;
+  width: calc(100% - 25vh);
+  margin-left: 2vh;
+  height: 5vh;
+}

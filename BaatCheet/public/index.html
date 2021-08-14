@@ -1,0 +1,61 @@
+
+<!DOCTYPE html>
+<html  oncontextmenu="return false;">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BaatCheet</title>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/50ccabcbd3.js" crossorigin="anonymous"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.17.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.17.0/firebase-database.js"></script>
+    
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" charset="utf-8"></script>
+</head>
+<body>
+
+    <div class="loginoverlay login" >
+        <div class="formcontainer">
+            <div class="imgcontainer">
+                <img src="https://vartalap-chat.herokuapp.com/undraw_secure_login_pdn4.svg" />
+            </div>
+            <center>
+            	<div id="usernameform login-form">
+                <h2>Baatcheet <span class="logo"><i class="fa fa-commenting"></i> </span></h2>
+                <input type="text" id="nameInput" class="userforminput" autocomplete="off"
+                placeholder="Write your Nick name" />
+                <button id="joinBtn" class="userformsubmit">Continue</button>
+                <small class="name-alert"></small>
+            </div>
+            </center>
+            
+            <img src="https://vartalap-chat.herokuapp.com/./Path%202.svg" class="cornerimg bl" />
+            <img src="https://vartalap-chat.herokuapp.com/./Path%203.svg" class="cornerimg br" />
+        </div>
+    </div>
+
+
+     <div class="main">
+            <div class="user-list">
+                <h3>Active Users</h3>
+                <ul id="userList">
+                     
+                </ul>
+            </div>
+            <div class="header">
+                <h2><i class="fa fa-commenting"></i> BaatCheet</h2>
+                <button id="userBtn">
+                  <i class="fa fa-users" aria-hidden="true"></i>
+                </button>
+            </div>
+            <div class="message-container"></div>
+            <div class="sending-form">
+                <input id="messageInput" placeholder="Type your message" autocomplete="off" >
+                <button  id="sendBtn" class="send-button"><i
+                    class="fa fa-paper-plane-o fa-fw"></i></button>
+            </div>
+        </div>
+
+</body>
+</html>

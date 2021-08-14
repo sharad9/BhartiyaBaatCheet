@@ -1,0 +1,320 @@
+:root {
+    --themecolor: rgb(31, 128, 255);
+    --conmesscolor: rgb(170, 184, 204);
+    --messageinputcolor: rgb(241, 247, 255);
+    --maincontainerbg: rgb(248, 248, 248);
+    --white: #fff;
+}
+* {
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+::-webkit-scrollbar {
+    width: 8px;
+}
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+::-webkit-scrollbar-thumb {
+    background: var(--conmesscolor) rgba(0, 0, 0, 0.5);
+}
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #fff;
+}
+body * {
+    scrollbar-width: thin;
+    scrollbar-color: rgba(0, 0, 0, 0.5) transparent;
+    
+
+}
+
+html {
+  margin:auto;
+  width: 100%;
+overflow-x:hidden;
+}
+/* Name Overlay Container */
+.loginoverlay {
+    height: 100vh;
+    width: 100%;
+    background: #ebebeb;
+    z-index: 10;
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    
+}
+.loginoverlay .formcontainer {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+    place-items: center;
+    height: 100%;
+    position: relative;
+}
+.loginoverlay .formcontainer .imgcontainer {
+    width: 300px;
+}
+.loginoverlay .formcontainer .imgcontainer img {
+    width: 100%;
+}
+.loginoverlay .formcontainer #usernameform {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    text-align: center;
+    width: 300px;
+    padding: 20px;
+    background: var(--white);
+    border-radius: 20px;
+    -webkit-box-shadow: 0 4px 4px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.2);
+}
+.loginoverlay .formcontainer  h2 {
+    margin-bottom: 20px;
+}
+.loginoverlay .formcontainer  .userforminput,
+.loginoverlay .formcontainer .userformsubmit {
+    padding: 12px;
+    border-radius: 20px;
+    font-size: 16px;
+    text-align: center;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+}
+.loginoverlay .formcontainer  .userforminput {
+    margin-bottom: 20px;
+    outline: 0;
+}
+.loginoverlay .formcontainer  .userformsubmit {
+    background: var(--themecolor);
+    color: var(--white);
+}
+.loginoverlay .formcontainer .cornerimg {
+    position: absolute;
+    z-index: -1;
+}
+.loginoverlay .formcontainer .bl {
+    bottom: 0;
+    left: 0;
+}
+.loginoverlay .formcontainer .br {
+    bottom: 0;
+    right: 0;
+}
+
+
+
+
+
+
+.main {
+    max-width: 1000px;
+    margin: auto;
+}
+
+.header {
+    width: 100%;
+    height: 60px;
+    background: var(--themecolor);
+    display: flex;
+    align-items: center;
+    letter-spacing: 2px;
+
+    justify-content: space-between;
+    padding: 8px;
+}
+
+.message-container {
+    position: relative;
+    width: 100%;
+    height: calc(100vh - 120px);
+    padding: 8px;
+    overflow-y: scroll;
+    background: #000;
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+.sending-form {
+    position: relative;
+
+    bottom: 0;
+    width: 100%;
+    height: 60px;
+    background: var(--themecolor);
+    display: flex;
+    align-items: center;
+    padding: 8px;
+}
+
+.sending-form > input {
+    flex: 1 1 auto;
+    margin-right: 8px;
+    padding: 16px;
+    border-radius: 10px;
+
+    padding: 16px;
+    border: 0;
+    border-bottom: 2px solid var(--themecolor);
+    border-radius: 4px;
+    outline: 0;
+    -webkit-box-flex: 1;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+    -webkit-transition: 0.15s;
+    transition: 0.15s;
+}
+	
+.sending-form .messageInput:focus {
+    background: var(--messageinputcolor);
+    border-color: var(--themecolor);
+}
+.sending-form .messageInput:active {
+    outline: 0;
+}
+
+
+.sending-form .send-button {
+    outline: none;
+    border-radius: 20px;
+    border: none;
+    background: black;
+    color: white;
+    font-size: 14px;
+    font-weight: bold;
+    padding: 12px;
+}
+	
+.sending-form .send-button:hover {
+    color: var(--white);
+    background: var(--themecolor);
+}
+.sending-form .send-button:active {
+    color: var(--white);
+    -webkit-box-shadow: 0 0 50px 50px var(--themecolor) inset, 0 0 10px var(--themecolor);
+    box-shadow: 0 0 50px 50px var(--themecolor) inset, 0 0 10px var(--themecolor);
+}
+.message {
+    border-radius: 8px;
+    padding: 10px;
+    margin-top: 12px;
+    font-weight:bolder;
+    font-size: 14px;
+}
+
+.message_mine {
+  align-self: flex-end;
+   background: var(--themecolor);
+  color:white;
+}
+
+.message_casual {
+  align-self: flex-start;
+  background: white;
+}
+
+.user-list {
+
+    z-index: 7;
+    border-radius: 10px;
+    
+     opacity: 0.5;
+   
+    
+
+    position: fixed;
+   
+    background: black;
+    color: white;
+    width: 200px;
+    height: 100vh;
+    right: 0;
+    padding: 8px;
+    transition: 600ms transform;
+}
+
+.user-list_hidden {
+    transform: translate(100%,0);
+}
+
+.user-list ul {
+    list-style: none;
+    padding: 0;
+}
+
+.user-list li {
+    margin-top: 12px;
+}
+
+.login {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.login-form {
+  margin-top: 12px;
+  padding: 8px;
+  background: skyblue;
+  border-radius: 20px;
+}
+
+.name-alert {
+  color: blue;
+}
+@-webkit-keyframes fadetop {
+    from {
+        -webkit-transform: translateY(8px);
+        transform: translateY(8px);
+        opacity: 0;
+    }
+    to {
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+@keyframes fadetop {
+    from {
+        -webkit-transform: translateY(8px);
+        transform: translateY(8px);
+        opacity: 0;
+    }
+    to {
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+@media screen and (max-width: 780px) {
+    .formcontainer {
+        -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    }
+    .formcontainer .imgcontainer {
+        display: none;
+    }
+}
+/*# sourceMappingURL=style.css.map */
+
+
+
+.user-list ul {
+    list-style: none;
+    padding: 0;
+}
+
+.user-list li {
+    margin-top: 12px;
+}
